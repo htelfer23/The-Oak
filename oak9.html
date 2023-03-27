@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>The Oak Chatbot Page</title>
+	<style>
+body {
+	background-color: #05080b;
+			color: #c2d8d8;
+			font-family: 'Didot';
+			font-style: italic;
+			font-size: 20px;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background-image: radial-gradient(circle, #00304d, #000e1a);
+			background-size: 1000% 1000%;
+			animation: animateBackground 50s ease-in-out infinite;
+		}
+
+		@keyframes animateBackground {
+			0% {
+				background-position: 0% 0%;
+			}
+			50% {
+				background-position: 100% 100%;
+			}
+			100% {
+				background-position: 0% 0%;
+			}
+		}
+h1 {
+    			text-shadow: 0 0 10px #56ffa4, 0 0 20px #56ffa4, 0 0 40px #56ffa4, 0 0 80px #56ffa4;
+    			animation: glowing 4s ease-in-out infinite;
+}
+h1::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			bottom: -10px;
+			transform: translateX(-50%);
+			width: 100%;
+			height: 2px;
+			background-color: #56ffa4;
+			z-index: -1;
+		}
+#dialogflow {
+			margin-top: 2rem;
+		}
+
+		iframe {
+			border: none;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Chat with the Ancient Oak...</h1>
+	<div id="stars"></div>
+	<div id="dialogflow">
+		<iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/1399600f-1085-40bf-aead-6c27894b6507"></iframe>
+	</div>
+	<script>
+
